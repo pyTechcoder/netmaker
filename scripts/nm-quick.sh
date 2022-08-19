@@ -197,7 +197,7 @@ curl -o /dev/null -s -X POST -H "Authorization: Bearer $MASTER_KEY" -H 'Content-
 echo "finished configuring server and network. You can now add clients."
 echo ""
 echo "For Linux and Mac clients, install with the following command:"
-echo "        curl -sfL https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/netclient-install.sh | sudo KEY=$ACCESS_TOKEN sh -"
+echo "        curl -sfL https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/netclient-install.sh | sudo KEY=$ACCESS_TOKEN sh -"
 echo ""
 echo "For Windows clients, perform the following from powershell, as administrator:"
 echo "        1. Make sure WireGuardNT is installed - https://download.wireguard.com/windows-client/wireguard-installer.exe"

@@ -125,7 +125,7 @@ Netclient
 
   3. You may experience an issue with the length of the token, which has limits on some OpenWRT shells. If you run into this problem, you can use the following script to convert your token into a "netclient join" command:
 
-  - `wget https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/token-convert.sh`
+  - `wget https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/token-convert.sh`
   - ./token-convert <token value>
   - Run the output on your OpenWRT machine
 

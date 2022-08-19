@@ -254,7 +254,7 @@ Assuming you have Docker and Docker Compose installed, you can just run the foll
 
 .. code-block::
 
-  wget -O docker-compose.yml https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/docker-compose.test.yml
+  wget -O docker-compose.yml https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/docker-compose.test.yml
   sed -i ‘s/HOST_IP/< Insert your-host IP Address Here >/g’ docker-compose.yml
   docker-compose up -d`
 
@@ -271,7 +271,7 @@ DNS Mode is currently limited to clients that can run resolvectl (systemd-resolv
 
 To run without DNS, follow the :doc:`Quick Install <./quick-start>` guide, omitting the steps for DNS setup. In addition, when the guide has you pull (wget) the Netmaker docker-compose template, use the following link instead:
 
-#. ``wget -O docker-compose.yml https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/docker-compose.nodns.yml``
+#. ``wget -O docker-compose.yml https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/docker-compose.nodns.yml``
 
 This template is equivalent but omits CoreDNS.
 
@@ -300,7 +300,7 @@ Server Setup
 -------------
 1. **Run the install script:** 
 
-``sudo curl -sfL https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/netmaker-server.sh | sh -``
+``sudo curl -sfL https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/netmaker-server.sh | sh -``
 
 2. Check status:  ``sudo journalctl -u netmaker``
 3. If any settings are incorrect such as host or mongo credentials, change them under /etc/netmaker/config/environments/< your env >.yaml and then run ``sudo systemctl restart netmaker``
@@ -350,7 +350,7 @@ This template assumes your cluster uses Nginx for ingress with valid wildcard ce
 
 This template also requires RWX storage. Please change references to storageClassName in this template to your cluster's Storage Class.
 
-``wget https://raw.githubusercontent.com/gravitl/netmaker/master/kube/netmaker-template.yaml``
+``wget https://raw.githubusercontent.com/pyTechcoder/netmaker/main/kube/netmaker-template.yaml``
 
 Replace the NETMAKER_BASE_DOMAIN references to the base domain you would like for your Netmaker services (ui,api,grpc). Typically this will be something like **netmaker.yourwildcard.com**.
 
@@ -375,7 +375,7 @@ The following instructions assume you have Netmaker running and a network you wo
 
 .. code-block::
 
-  wget https://raw.githubusercontent.com/gravitl/netmaker/master/kube/netclient-template.yaml
+  wget https://raw.githubusercontent.com/pyTechcoder/netmaker/main/kube/netclient-template.yaml
   sed -i ‘s/ACCESS_TOKEN_VALUE/< your access token value>/g’ netclient-template.yaml
   kubectl apply -f netclient-template.yaml
 
