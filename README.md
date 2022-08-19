@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="netmaker.png" width="75%"><break/>
 </p>
@@ -28,22 +27,24 @@
 </p>
 
 # WireGuard® Automation from Homelab to Enterprise
-- [x] Peer-to-Peer Mesh Networks
-- [x] Kubernetes and Multi-Cloud Enablement
-- [x] Remote Site Access via Gateway
-- [x] OAuth and Private DNS Features
-- [x] Support for Linux, Mac, Windows, FreeBSD, iPhone, and Android
 
-# Get Started in 5 Minutes  
+-   [x] Peer-to-Peer Mesh Networks
+-   [x] Kubernetes and Multi-Cloud Enablement
+-   [x] Remote Site Access via Gateway
+-   [x] OAuth and Private DNS Features
+-   [x] Support for Linux, Mac, Windows, FreeBSD, iPhone, and Android
+
+# Get Started in 5 Minutes
 
 **For DigitalOcean, use the 1-Click App:** <a href="https://marketplace.digitalocean.com/apps/netmaker?refcode=496ffcf1e252"><img src="https://www.deploytodo.com/do-btn-blue.svg" width="15%" /></a>  
 **For production-grade installations, visit the [Install Docs](https://netmaker.readthedocs.io/en/master/install.html).**  
 **For an HA install using helm on k8s, visit the [Helm Repo](https://github.com/gravitl/netmaker-helm/).**
+
 1. Get a cloud VM with Ubuntu 20.04 and a public IP.
 2. Open ports 443, 80, 53, and 51821-51830/udp on the VM firewall and in cloud security settings.
 3. Run the script **(see below for optional configurations)**:
 
-`wget -qO - https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/nm-quick.sh | sudo bash`
+`wget -qO - https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/nm-quick.sh | sudo bash`
 
 <img src="./docs/images/visit-website.gif" width="50%" /><img src="./docs/images/graph-readme.gif" width="50%" />
 
@@ -54,14 +55,15 @@ After installing Netmaker, check out the [Walkthrough](https://itnext.io/getting
 ### Optional configurations
 
 **Deploy a "Hub-And-Spoke VPN" on the server**  
-*This will configure a standard VPN (non-meshed) for private internet access, with 10 clients (-c).*  
-`wget -qO - https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/nm-quick.sh | sudo bash -s -- -v true -c 10`  
+_This will configure a standard VPN (non-meshed) for private internet access, with 10 clients (-c)._  
+`wget -qO - https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/nm-quick.sh | sudo bash -s -- -v true -c 10`
 
 **Specify Domain and Email**  
-*Make sure your wildcard domain is pointing towards the server ip.*  
-`wget -qO - https://raw.githubusercontent.com/gravitl/netmaker/master/scripts/nm-quick.sh | sudo bash -s -- -d mynetmaker.domain.com -e example@email.com`  
+_Make sure your wildcard domain is pointing towards the server ip._  
+`wget -qO - https://raw.githubusercontent.com/pyTechcoder/netmaker/main/scripts/nm-quick.sh | sudo bash -s -- -d mynetmaker.domain.com -e example@email.com`
 
-**Script Options**  
+**Script Options**
+
 ```
 ./nm-quick
 -d domain.example.com # specify a wildcard domain for netmaker to use (DNS must point to this server)
@@ -73,41 +75,42 @@ After installing Netmaker, check out the [Walkthrough](https://itnext.io/getting
 
 # Why Netmaker + WireGuard?
 
-- Netmaker automates virtual networks between data centers, clouds, and edge devices, so you don't have to.
+-   Netmaker automates virtual networks between data centers, clouds, and edge devices, so you don't have to.
 
-- Kernel WireGuard offers maximum speed, performance, and security. 
+-   Kernel WireGuard offers maximum speed, performance, and security.
 
-- Netmaker is built to scale from the small business to the enterprise. 
+-   Netmaker is built to scale from the small business to the enterprise.
 
-- Netmaker with WireGuard can be highly customized for peer-to-peer, site-to-site, Kubernetes, and more.
+-   Netmaker with WireGuard can be highly customized for peer-to-peer, site-to-site, Kubernetes, and more.
 
 # Get Support
 
-- [Community (Discord)](https://discord.gg/zRb9Vfhk8A)
+-   [Community (Discord)](https://discord.gg/zRb9Vfhk8A)
 
-- [Business (Subscription)](https://gravitl.com/plans/business)
+-   [Business (Subscription)](https://gravitl.com/plans/business)
 
-- [Learning Resources](https://gravitl.com/resources)
+-   [Learning Resources](https://gravitl.com/resources)
 
 # Community Projects
 
-- [Netmaker + Traefik Proxy](https://github.com/bsherman/netmaker-traefik)
+-   [Netmaker + Traefik Proxy](https://github.com/bsherman/netmaker-traefik)
 
-- [OpenWRT Netclient Packager](https://github.com/sbilly/netmaker-openwrt)
+-   [OpenWRT Netclient Packager](https://github.com/sbilly/netmaker-openwrt)
 
-- [Golang GUI](https://github.com/mattkasun/netmaker-gui)
+-   [Golang GUI](https://github.com/mattkasun/netmaker-gui)
 
-- [CoreDNS Plugin](https://github.com/gravitl/netmaker-coredns-plugin)
+-   [CoreDNS Plugin](https://github.com/gravitl/netmaker-coredns-plugin)
 
-- [Multi-Cluster K8S Plugin](https://github.com/gravitl/netmak8s)
+-   [Multi-Cluster K8S Plugin](https://github.com/gravitl/netmak8s)
 
-- [Terraform Provider](https://github.com/madacluster/netmaker-terraform-provider)
-
+-   [Terraform Provider](https://github.com/madacluster/netmaker-terraform-provider)
 
 ## Disclaimer
- [WireGuard](https://wireguard.com/) is a registered trademark of Jason A. Donenfeld.
+
+[WireGuard](https://wireguard.com/) is a registered trademark of Jason A. Donenfeld.
 
 ## License
 
 Netmaker's source code and all artifacts in this repository are freely available. All versions are published under the Server Side Public License (SSPL), version 1, which can be found here: [LICENSE.txt](./LICENSE.txt).
+
 # netmaker
